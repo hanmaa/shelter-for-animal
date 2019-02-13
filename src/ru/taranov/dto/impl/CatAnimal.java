@@ -2,12 +2,12 @@ package ru.taranov.dto.impl;
 
 import ru.taranov.dto.Animal;
 
-public class Goat implements Animal {
+public class CatAnimal implements Animal {
 
     private String name;
     private int age;
 
-    public Goat(String name, int age) {
+    public CatAnimal(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -30,10 +30,10 @@ public class Goat implements Animal {
 
     @Override
     public String giveVoice() {
-        return "Meeeeeeee";
+        return "Meow-Meow";
     }
 
     public String toString() {
-        return "goat's name is "+ name+" and his age is "+age;
+        return "cat's name is "+ name+" and his age is "+age;
     }
 }

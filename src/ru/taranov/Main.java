@@ -1,14 +1,12 @@
 package ru.taranov;
 
-import ru.taranov.dto.Animal;
+import ru.taranov.dto.Storage;
 import ru.taranov.dto.impl.*;
-
-import java.util.Map;
 
 
 public class Main {
 
-    static Shelter shelter = new Shelter();
+    static Storage storage = new HashMapStorage();
 
     static CatAnimal cat = new CatAnimal("Vasya", 3);
     static DogAnimal dog = new DogAnimal("Barya", 2);
@@ -16,19 +14,14 @@ public class Main {
 
     public static void main(String[] args) {
         settleAnimal();
-        System.out.println(shelter);
-        giveVoiceAnimal();
+        System.out.println(storage);
+        storage.giveVoiceAnimal();
     }
 
     private static void settleAnimal() {
-        shelter.setShelterMap(1, dog);
-        shelter.setShelterMap(2, goat);
-        shelter.setShelterMap(3, cat);
-    }
-
-    private static void giveVoiceAnimal() {
-        for(Map.Entry<Integer, Animal> animal : shelter.getShelterMap().entrySet()) {
-            System.out.println(animal.getValue().getName() + " says " + animal.getValue().giveVoice());
-        }
+        storage.addAnimal(cat);
+        storage.addAnimal(cat);
+        storage.addAnimal(dog);
+        storage.addAnimal(goat);
     }
 }

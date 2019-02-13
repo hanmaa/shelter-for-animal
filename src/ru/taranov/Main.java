@@ -15,8 +15,6 @@ public class Main {
     static GoatAnimal goat = new GoatAnimal("Borya", 5);
 
     public static void main(String[] args) {
-
-
         settleAnimal();
         System.out.println(shelter);
         giveVoiceAnimal();

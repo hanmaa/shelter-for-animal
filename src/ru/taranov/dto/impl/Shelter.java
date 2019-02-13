@@ -36,6 +36,6 @@ public class Shelter implements Storage {
     }
 
     public String toString(){
-        return "In the shelter live "+shelterMap;
+        return "In a shelter there live a "+shelterMap;
     }
 }

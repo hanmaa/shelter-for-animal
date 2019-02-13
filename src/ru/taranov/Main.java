@@ -23,9 +23,9 @@ public class Main {
     }
 
     private static void settleAnimal() {
-        shelter.setShelterMap(1, cat);
-        shelter.setShelterMap(2, dog);
-        shelter.setShelterMap(3, goat);
+        shelter.setShelterMap(1, dog);
+        shelter.setShelterMap(2, goat);
+        shelter.setShelterMap(3, cat);
     }
 
     private static void giveVoiceAnimal() {

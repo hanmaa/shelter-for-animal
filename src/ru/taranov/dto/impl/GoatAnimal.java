@@ -34,6 +34,6 @@ public class GoatAnimal implements Animal {
     }
 
     public String toString() {
-        return "goat's name is "+ name+" and his age is "+age;
+        return "goat's name is "+ name + " and his age is " + age;
     }
 }

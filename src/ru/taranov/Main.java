@@ -15,7 +15,6 @@ public class Main {
     public static void main(String[] args) {
         settleAnimal();
         System.out.println(storage);
-        storage.giveVoiceAnimal();
     }
 
     private static void settleAnimal() {

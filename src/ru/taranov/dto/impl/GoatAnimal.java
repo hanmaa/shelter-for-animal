@@ -2,6 +2,8 @@ package ru.taranov.dto.impl;
 
 import ru.taranov.dto.Animal;
 
+import java.util.Objects;
+
 public class GoatAnimal implements Animal {
 
     private String name;
@@ -31,6 +33,20 @@ public class GoatAnimal implements Animal {
     @Override
     public String giveVoice() {
         return "Meeeeeeee";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GoatAnimal that = (GoatAnimal) o;
+        return age == that.age &&
+                Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
     }
 
     public String toString() {
